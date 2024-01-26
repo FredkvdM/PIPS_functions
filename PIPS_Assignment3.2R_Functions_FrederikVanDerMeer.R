@@ -7,7 +7,6 @@ remind_me <- function() {
   return(c("oat milk", "peanut butter", "butter", "olive oil", "oat meal", 
            "garlic", "pasta", "rice", "soy sauce", "bread", "potatoes"))
 }
-remind_me()
 
 # cheat function
 cheat <- function(cheat_exercise = "Q3.1.3") {
@@ -61,4 +60,3 @@ cheat <- function(cheat_exercise = "Q3.1.3") {
     
   }
 }
-cheat()
