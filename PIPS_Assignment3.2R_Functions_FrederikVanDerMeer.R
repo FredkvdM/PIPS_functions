@@ -56,7 +56,6 @@ cheat <- function(cheat_exercise = "Q3.1.3") {
                  name = paste(\"fck\", stock_symbol), 
                 subset = year)
     }
-  plotstock()")
-    
+  plotstock()") 
   }
 }
