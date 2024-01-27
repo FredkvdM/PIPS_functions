@@ -13,6 +13,6 @@ The cheat function can return the solutions of three different exercises of Assi
 The argument specifies the question for which the solution is wanted. The default is (cheat_exercise = "Q3.1.3").
 Other exercises to cheat on are Q3.1.6 and Q3.1.13.
 
-# IPS_Assignment3.2R.2_Make_art_Function.Rmd
+# PIPS_Assignment3.2R.2_Make_art_Function.Rmd
 The file "IPS_Assignment3.2R.2_Make_art_Function.Rmd" holds one function with witch you can create random art.
 The argument, a random number, is optional. The default is (seed = 10).
