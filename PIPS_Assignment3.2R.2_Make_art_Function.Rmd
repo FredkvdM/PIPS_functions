@@ -1,0 +1,77 @@
+---
+title: "PIPS_Assignment3.2R.2_Make_art_Function"
+output: html_document
+date: "2024-01-27"
+---
+
+## The make_art function
+With the following function you can create random art. You can add an optional 
+argument (seed = random number), but as optional implies, this is not necessary.
+If you decide to not add a number, the default is seed = 10. 
+Now you can start and explore the function!
+
+## The code
+This is the code to initiate the make_art function:
+
+```{r}
+# install.packages("ggplot2")
+library(ggplot2)
+
+make_art <- function(seed = 10) {
+  my_art <- ggplot() +
+    geom_segment(aes(x = 1:100, xend = seed, y = seq(1, 10, length.out = 100), 
+                     yend = seed + 5), colour = "#750052") +
+    geom_curve(aes(x = 1:100, xend = seed, y = seq(1, 10, length.out = 100), 
+                   yend = seed + 5), colour = "#007680") +
+    geom_curve(aes(x = 10:109, xend = seed, y = seq(10, 19, length.out = 100), 
+                   yend = seed + 5), colour = "#cfcf60") +
+    geom_curve(aes(x = 20:119, xend = seed, y = seq(20, 29, length.out = 100), 
+                   yend = seed + 5), colour = "#ff187d") +
+    geom_segment(aes(x = -1:-100, xend = seed, y = seq(1, 10, length.out = 100), 
+                     yend = seed + 5), colour = "#000000") +
+    geom_curve(aes(x = -1:-100, xend = seed, y = seq(1, 10, length.out = 100), 
+                   yend = seed + 5), colour = "#ffffff") +
+    geom_curve(aes(x = -10:-109, xend = seed, y = seq(10, 19, length.out = 100), 
+                   yend = seed + 5), colour = "#ffffff") +
+    geom_curve(aes(x = -20:-119, xend = seed, y = seq(20, 29, length.out = 100), 
+                   yend = seed + 5), colour = "#000000") +
+    geom_segment(aes(x = 1:100, xend = -seed, y = seq(1, 10, length.out = 100), 
+                     yend = -seed - 5), colour = "#000000") +
+    geom_curve(aes(x = 1:100, xend = -seed, y = seq(1, 10, length.out = 100), 
+                   yend = -seed - 5), colour = "#ffffff") +
+    geom_curve(aes(x = 10:109, xend = -seed, y = seq(10, 19, length.out = 100), 
+                   yend = -seed - 5), colour = "#ffffff") +
+    geom_curve(aes(x = 20:119, xend = -seed, y = seq(20, 29, length.out = 100), 
+                   yend = -seed - 5), colour = "#000000") +
+    geom_segment(aes(x = -1:-100, xend = -seed, y = seq(1, 10, length.out = 100), 
+                     yend = -seed - 5), colour = "#750052") +
+    geom_curve(aes(x = -1:-100, xend = -seed, y = seq(1, 10, length.out = 100), 
+                   yend = -seed - 5), colour = "#007680") +
+    geom_curve(aes(x = -10:-109, xend = -seed, y = seq(10, 19, length.out = 100), 
+                   yend = -seed - 5), colour = "#cfcf60") +
+    geom_curve(aes(x = -20:-119, xend = -seed, y = seq(20, 29, length.out = 100), 
+                   yend = -seed - 5), colour = "#ff187d") +
+    theme_void()
+  return(my_art)
+}
+```
+
+## The output
+This is some output with the default (seed = 10):
+
+```{r}
+make_art()
+```
+
+This is some output with a higher argument value, (seed = 50):
+
+```{r}
+make_art(seed = 50)
+```
+
+This is some output with a lower argument value, (seed = -50):
+
+```{r}
+make_art(seed = -50)
+```
+
